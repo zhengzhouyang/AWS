@@ -1,0 +1,68 @@
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+-- File Name     	: S3_101.txt
+
+-- Author        	: Alex(Zhouyang Zheng)
+
+-- Corporation	 	: Cloud Creek Systems, Inc.
+
+-- Last Modified 	: 06/20/2017
+
+-- Notes			: S3
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+Concepts:
+		
+		Read after write consistency for PUTS of new Objects
+			(A new object can be accessed immediately after successfully uploading)
+		
+		Eventual Consistency for overwrite PUTS and DELETES(can take some time to propagate)
+			(Updating or deleting an existing object can take some time, you can get either old data or new data)
+			
+		S3 is object based
+			key 		---- 		The name of the object(randomness of the name can improve the performance)
+			value 		----		Actual data and is made up of a sequence of bytes
+			Version_id	----		Important for versioning
+			Metadata	----		Data about the data you are storing
+		Encryption
+		Secure your data using Access Control Lists and Bucket Policies
+		
+		S3-IA(Infrequently Accessed),lower fee than s3, rapid access when needed compared to Glacier,charged a retrieval fee
+		
+		S3-Reduced Redundancy Storage, lower durability but still 99.99%, lower cost
+		
+		Glacier very cheaper but used for archival only. It takes 3-5 hours to retrieval
+		
+		Charged for	
+			storage
+			requests
+			storage management pricing
+			data transfer pricing(moving into AWS is free,tranfer between region is not free)
+			transfer acceleration
+		
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+Lab 1: Create S3 Bucket
+
+		1. Services --> S3 --> Create Bucket (Although there is a region is the pop up windows but acutaully S3 bucket is global)
+		
+		2. The bucket name should be unique globally
+		
+		3. lifecycle management
+		
+		4. after uploading, have to change the permissions to make the content public to the end users
+		
+		5. Other options, storage class, encryption, metadata, tags.
+
+Lab 2: Version Control
+
+		
+		
+lab 3: Create users and groups, how to assign the permissions
+
+		
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,50 @@
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+-- File Name     	: IAM_101.txt
+
+-- Author        	: Alex(Zhouyang Zheng)
+
+-- Corporation	 	: Cloud Creek Systems, Inc.
+
+-- Last Modified 	: 06/20/2017
+
+-- Notes			: For IAM concept
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+
+Concepts:
+		
+		Roles is very import, assign them to the AWS resources so they can connect automatically.
+
+		Policies is a document that defines one or more permissions
+
+		IAM is global,not based on region.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+Lab 1: Create Account Alias
+
+		1. Customized IAM users sign-in link, it is azheng-ccs-3
+
+Lab 2: Activate MFA on your root account
+
+		1. Console --> Click the activate MFA --> Go next always
+		
+		2. Download Google Authenticator on your phone, Scan the QR code on the screen, input two generated num then authorized 
+		
+		3. Finish the rest steps , then refresh the page
+		
+lab 3: Create users and groups, how to assign the permissions
+
+		1. create users, give the access to programmatic or console or both
+		
+		2. create group for users and assign the related permissions
+		
+		3. Summary page, Access Key is used for programmatic purpose, secret key is a token.
+
+		4. Create and assign the permission to user individually or use group to assign
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------
