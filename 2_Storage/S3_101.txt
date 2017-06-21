@@ -41,6 +41,8 @@ Concepts:
 			data transfer pricing(moving into AWS is free,tranfer between region is not free)
 			transfer acceleration
 		
+		Version's MFA Delete capacility will use multi factor authentication to delete the objects
+		
 -----------------------------------------------------------------------------------------------------------------------------------------
 
 Lab 1: Create S3 Bucket
@@ -57,12 +59,34 @@ Lab 1: Create S3 Bucket
 
 Lab 2: Version Control
 
+		1. Enable version in S3 properties
 		
+		2. You can see the version under object overview
 		
-lab 3: Create users and groups, how to assign the permissions
-
+		3. Delete a version can't be restored
 		
+		4. Delete an object can be restored directly from console
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------
+		
+lab 3: Cross-region replication(under the same console,S3 is in one region but can be accessed globally)
+
+		1. source and destination buckets must be version enabled
+		
+		2. create a new role between two S3 to make it work(AWS will auto create a new role)
+		
+		3. don't upload the file with language other than English, it will break the S3
+		
+		4. The existing object won't be replicated, only the new object will be replicated
+
+lab 4: life cycle management	
+
+		1. Enable version
+		
+		2. life cycle management, easy to deploy, 30 days transmit to S3-IA, 60 days transmit to glacier, 61 days expired on current version
+
+		3. actions on previous version, the same action but the last action is permanently delete -- glacier requires at least 90 days
+
+
 -----------------------------------------------------------------------------------------------------------------------------------------
